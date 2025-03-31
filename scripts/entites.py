@@ -27,7 +27,9 @@ class GameEntity:
 
     def draw(self, debug = False):
         if debug : rl.draw_rectangle_rec(self.rect, rl.RED)
+        
         rl.draw_texture_v(self.current_animation.img(), self.animation_render_pos, rl.WHITE)
+        self.trail.draw()
 
 class Player(GameEntity):
     def __init__(self, game, rect : rl.Rectangle, animations : dict[str, Animation], animation_offset : rl.Vector2 = rl.Vector2(0, 0)):

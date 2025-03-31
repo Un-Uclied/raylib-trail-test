@@ -107,10 +107,11 @@ class MainGame(Scene):
         # Begin Ui Render
         rl.draw_text("Main Game Scene", 10, 10, 40, rl.WHITE)
         rl.draw_fps(10, 80)
+        rl.draw_texture_rec(self.world.texture, rl.Rectangle(0, 0, rl.get_screen_width(), -rl.get_screen_height()), rl.Vector2(0, 0), rl.WHITE)
         #End Ui Render
         rl.end_drawing()
 
-        rl.draw_texture_rec(self.world.texture, rl.Rectangle(0, 0, rl.get_screen_width(), -rl.get_screen_height()), rl.Vector2(0, 0), rl.WHITE)
+
 
 if __name__ == "__main__":
     Game().run()
